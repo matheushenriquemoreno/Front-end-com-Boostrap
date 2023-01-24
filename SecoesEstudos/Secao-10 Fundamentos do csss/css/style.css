@@ -1,0 +1,22 @@
+/*Back grounds*/
+
+.div-background {
+  height: 500px;
+  background-image: url("jezael-melgoza-2FiXtdnVhjQ-unsplash.jpg");
+  image-resolution: 500px;
+}
+
+.Titulo-Background {
+  text-align: center;
+  background-color: black;
+  color: aliceblue;
+}
+
+.container {
+  height: 200px;
+  width: 400px;
+  background-color: black;
+  color: aliceblue;
+  padding: 20px;
+  border: 10px solid red;
+}

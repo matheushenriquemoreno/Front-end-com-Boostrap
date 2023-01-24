@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
+        defer></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container" role="alert">
+
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#minha-modal">Abri Modal</button>
+    </div>
+    <!--container modal-->
+    <div class="modal fade" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" id="minha-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Titulo</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Modal obrigação
+    </button>
+
+    <!-- Modal -->
+    <div class="modal " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Titulo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /*Pego modal pelo id*/
+        //const modal = new bootstrap.Modal(document.getElementById("minha-modal"), {});
+
+        document.querySelector("body").addEventListener("click", () => {
+            // const modal = new bootstrap.Modal(document.getElementById("minha-modal"), {});
+            var myModalEl = document.querySelector('#minha-modal')
+            const modal = bootstrap.Modal.getOrCreateInstance(myModalEl);
+            modal.toggle()
+
+            /*Mostrar modal*/
+            //modal.show()
+            /*Excluir*/
+
+            setTimeout(() => {
+                //modal.dispose()
+            }, 1000);
+
+        })
+
+
+    </script>
+</body>
+
+</html>
+
+
+<!--
+    https://getbootstrap.com/docs/5.0/components/modal/#usage
+Eventos
+A classe modal do Bootstrap expõe alguns eventos para conexão com a funcionalidade modal. Todos os eventos modais são disparados no próprio modal (ou seja, no <div class="modal">).
+
+Tipo de evento	Descrição
+show.bs.modal	Este evento é disparado imediatamente quando o showmétodo de instância é chamado. Se for causado por um clique, o elemento clicado estará disponível como relatedTargetpropriedade do evento.
+shown.bs.modal	Este evento é disparado quando o modal se torna visível para o usuário (aguarda a conclusão das transições do CSS). Se for causado por um clique, o elemento clicado estará disponível como relatedTargetpropriedade do evento.
+hide.bs.modal	Este evento é acionado imediatamente quando o hidemétodo de instância é chamado.
+hidden.bs.modal	Este evento é acionado quando o modal terminar de ser ocultado do usuário (aguardará a conclusão das transições do CSS).
+hidePrevented.bs.modal	Este evento é disparado quando o modal é mostrado, seu pano de fundo é statice um clique fora do modal ou um pressionamento da tecla escape é executado com a opção de teclado ou data-bs-keyboarddefinida como false.
+
+
+
+-->

@@ -1,0 +1,135 @@
+/*Estilos padraoes */
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #acacac;
+  color: #fff;
+}
+
+.primary-bg-color {
+  background-color: #252525;
+}
+
+.secundary-bg-color {
+  background-color: #c09578;
+}
+
+.secundary-bg-color2 {
+  background: #c09578;
+}
+
+.light-bg-color {
+  background-color: #fcf5eb;
+}
+
+.dark-bg-color {
+  background-color: #101010;
+}
+.primary-color {
+  color: #c09578;
+}
+
+.secundary-color {
+  color: #626262;
+}
+
+.light-color {
+  color: #fcf5eb;
+}
+
+/*NavBar*/
+
+#navbar .navbar-nav {
+  flex-direction: row;
+  justify-content: end;
+}
+
+#navbar .navbar-nav li {
+  margin-left: 1em;
+}
+#navbar a,
+#navbar button {
+  color: #fff;
+}
+
+#navbar li {
+  position: relative;
+}
+
+#navbar i {
+  font-size: 20px;
+}
+
+/* CSS da bolinha em cima dos icones*/
+#navbar span {
+  position: absolute;
+  top: -9px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+}
+
+#bag-item span {
+  left: 20px;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    text-align: left;
+  }
+}
+
+#navbar-items {
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  #navbar-items {
+    min-width: 80%;
+    display: flex;
+  }
+}
+
+#form-busca {
+  width: 100%;
+  margin: 2em 0;
+}
+
+@media (min-width: 768px) {
+  #form-busca {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+#form-busca {
+  border: 2px solid #626262;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+#form-busca input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+#form-busca input:focus {
+  box-shadow: none;
+}
+
+#form-busca input::placeholder {
+  color: #fff;
+}

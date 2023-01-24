@@ -1,0 +1,11 @@
+.col-3 {
+  border: 1px solid red;
+}
+
+.impar {
+  background-color: beige;
+}
+
+.par {
+  background-color: rgb(127, 125, 250);
+}
