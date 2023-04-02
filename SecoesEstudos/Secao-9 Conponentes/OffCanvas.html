@@ -20,23 +20,52 @@
 
 <body>
     <div class="container m-4">
-        <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#off-canvas"
-            aria-controls="off-canvas"> Abrir carrinho </button>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="off-canvas" aria-labelledby="offcanvasLabel">
-            <div class="offcanvas-header">
-                <h2 id="offcanvasLabel"> Carrinho</h2>
-                <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas"
-                    aria-label="close"></button>
+        <div class="col-10 d-flex bd-highlight">
+            <div class="ms-auto bd-highlight">
+                
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+            
+                    <div class="offcanvas offcanvas-end"  id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        ...
+                      </div>
+                    </div>
             </div>
-            <div class="offcanvas-body">
-                <li>produto 1</li>
-                <li>produto 1</li>
-                <li>produto 1</li>
-                <li>produto 1</li>
+                
+        </div>
+
+
+
+
+
+        <!-- alterar width: 50%; para melhorar tamanho, Laptop 40%, Tablet 60%, Celular 80% -->
+        <div>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#carrinho-compra"
+                aria-controls="carrinho-compra"> Abrir carrinho </button>
+
+            <div class="offcanvas offcanvas-end" id="carrinho-compra" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h2 id="offcanvasLabel"> Carrinho</h2>
+                    <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas"
+                        aria-label="close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <hr/>
+                    <li>produto 1</li>
+                    <li>produto 1</li>
+                    <li>produto 1</li>
+                    <li>produto 1</li>
+                </div>
             </div>
         </div>
+
     </div>
+
 </body>
 
 </html>

@@ -41,8 +41,7 @@
     </button>
 
     <!-- Modal -->
-    <div class="modal " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal " id="staticBackdrop">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -54,7 +53,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button type="button" class="btn btn-primary" id="fecharModal">Understood</button>
                 </div>
             </div>
         </div>
@@ -64,21 +63,31 @@
         /*Pego modal pelo id*/
         //const modal = new bootstrap.Modal(document.getElementById("minha-modal"), {});
 
-        document.querySelector("body").addEventListener("click", () => {
-            // const modal = new bootstrap.Modal(document.getElementById("minha-modal"), {});
-            var myModalEl = document.querySelector('#minha-modal')
+
+        document.querySelector("#fecharModal").addEventListener("click", function(e){
+            var myModalEl = document.querySelector('#staticBackdrop')
             const modal = bootstrap.Modal.getOrCreateInstance(myModalEl);
-            modal.toggle()
-
-            /*Mostrar modal*/
-            //modal.show()
-            /*Excluir*/
-
-            setTimeout(() => {
-                //modal.dispose()
-            }, 1000);
-
+            modal.hide()
         })
+
+        // document.querySelector("body").addEventListener("click", () => {
+        //     // const modal = new bootstrap.Modal(document.getElementById("minha-modal"), {});
+        //     var myModalEl = document.querySelector('#minha-modal')
+        //     const modal = bootstrap.Modal.getOrCreateInstance(myModalEl);
+        //     modal.toggle()
+
+        //     /*Mostrar modal*/
+        //     //modal.show()
+        //     /*Excluir*/
+
+
+
+
+        //     setTimeout(() => {
+        //         //modal.dispose()
+        //     }, 1000);
+
+        // })
 
 
     </script>

@@ -26,3 +26,17 @@
 
 
 /* https://www.w3schools.com/js/js_validation_api.asp */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// entrei dia 01/01/2023 - tempo 3 meses apos adimisão: so entraria no publico alvo no dia 01/04/2023?
